@@ -2,27 +2,29 @@ package com.lalorosas.retirementcalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lalorosas.retirementcalculator.databinding.ActivityMainBinding
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
         AppCenter.start(application, "dad01173-aa9d-43d8-b7ea-df1b7bec99b0", Analytics::class.java, Crashes::class.java);
 
-        calculateButton.setOnClickListener {
+        binding.calculateButton.setOnClickListener {
             // Crashes.generateTestCrash()
             try {
-                val interestRate = interestEditText.text.toString().toFloat()
-                val currentAge = ageEditText.text.toString().toInt()
-                val retirementAge = retirementEditText.text.toString().toInt()
-                val monthly = monthlySavingsEditText.text.toString().toFloat()
-                val current = currentEditText.text.toString().toFloat()
+                val interestRate = binding.interestEditText.text.toString().toFloat()
+                val currentAge = binding.ageEditText.text.toString().toInt()
+                val retirementAge = binding.retirementEditText.text.toString().toInt()
+                val monthly = binding.monthlySavingsEditText.text.toString().toFloat()
+                val current = binding.currentEditText.text.toString().toFloat()
 
                 val properties:HashMap<String, String> = HashMap<String, String>()
                 properties.put("interest_rate", interestRate.toString())
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                     Analytics.trackEvent("wrong_age", properties)
                 }
 
-                resultTextView.text = "At the current rate of $interestRate%, saving \$$monthly a month you will have \$X by $retirementAge."
+                binding.resultTextView.text = "At the current rate of $interestRate%, saving \$$monthly a month you will have \$X by $retirementAge."
             } catch(ex: Exception){
                 Analytics.trackEvent(ex.message)
             }
