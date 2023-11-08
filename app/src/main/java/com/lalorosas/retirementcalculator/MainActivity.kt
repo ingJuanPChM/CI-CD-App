@@ -2,6 +2,7 @@ package com.lalorosas.retirementcalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.lalorosas.retirementcalculator.databinding.ActivityMainBinding
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -41,6 +42,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 binding.resultTextView.text = "At the current rate of $interestRate%, saving \$$monthly a month you will have \$X by $retirementAge."
+
+                Toast.makeText(this, "new release project", Toast.LENGTH_LONG).show()
             } catch(ex: Exception){
                 Analytics.trackEvent(ex.message)
             }
