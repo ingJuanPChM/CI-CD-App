@@ -1,5 +1,7 @@
-dev: [![Build status](https://build.appcenter.ms/v0.1/apps/4e79bce2-60f5-4b60-96ea-4c515c81c715/branches/dev/badge)](https://appcenter.ms)
+current branch: [![Build status](https://build.appcenter.ms/v0.1/apps/dae1faed-c6f7-4a98-a3f9-7e3960bb8fd3/branches/updateDependencies/badge)](https://appcenter.ms)
 
-test: [![Build status](https://build.appcenter.ms/v0.1/apps/4e79bce2-60f5-4b60-96ea-4c515c81c715/branches/test/badge)](https://appcenter.ms)
+dev: [![Build status](https://build.appcenter.ms/v0.1/apps/dae1faed-c6f7-4a98-a3f9-7e3960bb8fd3/branches/Dev/badge)](https://appcenter.ms)
 
-master: [![Build status](https://build.appcenter.ms/v0.1/apps/4e79bce2-60f5-4b60-96ea-4c515c81c715/branches/master/badge)](https://appcenter.ms)
+test: [![Build status](https://build.appcenter.ms/v0.1/apps/dae1faed-c6f7-4a98-a3f9-7e3960bb8fd3/branches/Test/badge)](https://appcenter.ms)
+
+main: [![Build status](https://build.appcenter.ms/v0.1/apps/dae1faed-c6f7-4a98-a3f9-7e3960bb8fd3/branches/main/badge)](https://appcenter.ms)
