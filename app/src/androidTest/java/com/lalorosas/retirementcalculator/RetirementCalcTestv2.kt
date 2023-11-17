@@ -29,6 +29,7 @@ class RetirementCalcTestv2 {
     var mActivityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Rule
+    @JvmField
     var reportHelper = Factory.getReportHelper()
 
     @Test
